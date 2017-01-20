@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding">
+
+    <ImageView
+        android:id="@+id/poster_movie"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_overview_movie"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/poster_movie"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/secondaryTextDark"
+        tools:text="overview overview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_overview_movie"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/poster_movie"
+        android:layout_toRightOf="@+id/poster_movie"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_label_title"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:drawableLeft="@drawable/ic_title_grey_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableStart="@drawable/ic_title_grey_24dp"
+            android:gravity="center_vertical"
+            android:text="@string/title_original_title"
+            android:textColor="@color/secondaryTextDark" />
+
+        <TextView
+            android:id="@+id/tv_original_title"
+            style="@style/Body1"
+            android:layout_marginLeft="@dimen/default_margin3"
+            android:layout_marginStart="@dimen/default_margin3"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@string/title_original_title" />
+
+
+        <TextView
+            android:id="@+id/tv_label_release_date"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:drawableLeft="@drawable/ic_event_note_grey_600_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableStart="@drawable/ic_event_note_grey_600_24dp"
+            android:gravity="center_vertical"
+            android:text="@string/title_release_date"
+            android:textColor="@color/secondaryTextDark" />
+
+        <TextView
+            android:id="@+id/tv_release_date_movie"
+            style="@style/Body1"
+            android:layout_marginLeft="@dimen/default_margin3"
+            android:layout_marginStart="@dimen/default_margin3"
+            tools:text="@string/title_release_date" />
+
+        <TextView
+            android:id="@+id/tv_label_vote_average"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:drawableLeft="@drawable/ic_star_grey_600_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableStart="@drawable/ic_star_grey_600_24dp"
+            android:gravity="center_vertical"
+            android:text="@string/title_rating"
+            android:textColor="@color/secondaryTextDark" />
+
+        <TextView
+            android:id="@+id/tv_vote_average_movie"
+            style="@style/Body1"
+            android:layout_marginLeft="@dimen/default_margin3"
+            android:layout_marginStart="@dimen/default_margin3"
+            tools:text="Rating" />
+    </LinearLayout>
+
+
+</RelativeLayout>

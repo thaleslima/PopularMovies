@@ -1,12 +1,28 @@
 <resources>
-    <string name="app_name">Popular Movies</string>
+    <string name="app_name" translatable="false">Popular Movies</string>
+    <string name="content_authority" translatable="false">com.thaleslima.android.popularmovies</string>
 
-    <string name="vote_average">%1$s/10</string>
-
-    <string name="error_message">
-        An error has occurred. Please try again by clicking REFRESH
-    </string>
-
+    <!--Main Activity-->
+    <string name="error_message">An error has occurred. Please try again by clicking REFRESH</string>
+    <string name="no_movies_message">No movies</string>
     <string name="action_popular">Popular</string>
     <string name="action_top_rated">Top rated</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="title_no_connection">No connection</string>
+    <string name="title_retry">Retry</string>
+
+
+    <!--Detail Activity-->
+    <string name="action_share">Share</string>
+    <string name="title_save_favorite">Added to favorites</string>
+    <string name="title_remove_favorite">Removed from favorites</string>
+
+
+    <!--Detail Fragment-->
+    <string name="vote_average">%1$s/10</string>
+    <string name="title_videos">Videos</string>
+    <string name="title_reviews">Reviews</string>
+    <string name="title_release_date">Release date</string>
+    <string name="title_original_title">Original title</string>
+    <string name="title_rating">Rating</string>
 </resources>

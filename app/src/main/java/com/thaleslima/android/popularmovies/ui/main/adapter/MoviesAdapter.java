@@ -1,4 +1,4 @@
-package com.thaleslima.android.popularmovies;
+package com.thaleslima.android.popularmovies.ui.main.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,8 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+import com.thaleslima.android.popularmovies.R;
 import com.thaleslima.android.popularmovies.domain.Movie;
-import com.thaleslima.android.popularmovies.utilities.NetworkUtils;
+import com.thaleslima.android.popularmovies.utilities.ResolveUrlUtil;
 
 import java.util.List;
 
@@ -18,8 +19,8 @@ import java.util.List;
  * Created by thales on 08/01/17.
  */
 
-class MoviesAdapter extends ArrayAdapter<Movie> {
-    MoviesAdapter(Context context, List<Movie> movies) {
+public class MoviesAdapter extends ArrayAdapter<Movie> {
+    public MoviesAdapter(Context context, List<Movie> movies) {
         super(context, 0, movies);
     }
 
@@ -35,13 +36,15 @@ class MoviesAdapter extends ArrayAdapter<Movie> {
 
         ImageView movieImage = (ImageView) convertView.findViewById(R.id.movie_image);
         if (movie != null) {
-            Picasso.with(getContext()).load(NetworkUtils.POSTER_BASE_URL + movie.posterPath).into(movieImage);
+            Picasso.with(getContext())
+                    .load(ResolveUrlUtil.getCompletePosterUrl(movie.posterPath))
+                    .into(movieImage);
         }
 
         return convertView;
     }
 
-    void setMoviesData(List<Movie> movies) {
+    public void setMoviesData(List<Movie> movies) {
         clear();
         addAll(movies);
         notifyDataSetChanged();

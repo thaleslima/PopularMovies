@@ -7,6 +7,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    
-    <color name="teal_500">#009688</color>
+    <color name="gradient_top">#55000000</color>
+    <color name="gradient_bottom">#00000000</color>
+    <color name="divider">#F5F5F5</color>
 </resources>
