@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <string name="vote_average">%1$s/10</string>
+
+    <string name="error_message">
+        An error has occurred. Please try again by clicking REFRESH
+    </string>
+
+    <string name="action_popular">Popular</string>
+    <string name="action_top_rated">Top rated</string>
+</resources>
